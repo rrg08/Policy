@@ -3,17 +3,13 @@
     "Statement": [
         {
             "Effect": "Allow",
-            "Principal": {
-                "AWS": "arn:aws:iam::role_arn_num:root"
-            },
+            "Principal": "*",
             "Action": "s3:GetObject",
             "Resource": "arn:aws:s3:::s3_name/*"
         },
         {
             "Effect": "Deny",
-            "Principal": {
-                "AWS": "arn:aws:iam::role_arn_num:root"
-            },
+            "Principal": "*",
             "Action": "s3:PutObject",
             "Resource": "arn:aws:s3:::s3_name/*"
         }
